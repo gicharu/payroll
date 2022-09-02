@@ -78,7 +78,7 @@ foreach ($employees as $emp) {
 
     $pdf->AddPage();
     $year = (int)$_GET['y'];
-    $pdf->Image("../assets/img/kra2.png", 100);
+    $pdf->Image("../assets/img/kra.png", 100);
     $pdf->Ln(26);
 
     $pdf->Cell(10, 5, "P9A");
