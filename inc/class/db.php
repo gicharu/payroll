@@ -17,7 +17,7 @@ class Db
 {
     protected static $_connection = NULL;
     private static $_mysqlUser = 'root';
-    private static $_mysqlPass = '';
+    private static $_mysqlPass = 'password';
     private static $_mysqlDb = 'payroll';
     private static $_mysqlHost = 'localhost';
 

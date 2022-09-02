@@ -24,7 +24,7 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-function __autoload($class_name)
+spl_autoload_register(function($class_name)
 {
     $file = strtolower("../inc/class/" . $class_name . ".php");
     try {
@@ -36,7 +36,7 @@ function __autoload($class_name)
     } catch (Exception $e) {
         echo "Exception: " . $e->getMessage();
     }
-}
+});
 
 if (isset($_GET['m'], $_GET['y'])) {
     $obj = new Employee();

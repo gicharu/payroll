@@ -1,5 +1,10 @@
-# payroll
+# Payroll
 Makmesh Payroll (Kenya)
+
+#Requirements
+- php5.6
+- php5.6-imagick / php5.6-gd
+- php5.6-mysql
 
 The system generates:
 - Payroll
@@ -15,7 +20,6 @@ To access the system use the following:
 username: supervisor
 password: 1234
 
-visit http://makmesh.com/payroll for live testing
 
 To configure sending email to employee
-Go to 'reports/email.php' on line 314 and configure the Gmail SMPT details to match yours
+Go to 'reports/email.php' on line 314 and configure the Gmail SMTP details to match yours

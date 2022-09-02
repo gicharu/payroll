@@ -22,7 +22,7 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-function __autoload($class_name)
+spl_autoload_register(function($class_name)
 {
     $file = strtolower("../inc/class/" . $class_name . ".php");
     try {
@@ -34,7 +34,7 @@ function __autoload($class_name)
     } catch (Exception $e) {
         echo "Exception: " . $e->getMessage();
     }
-}
+});
 
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 

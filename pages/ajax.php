@@ -16,7 +16,7 @@
 session_start();
 
 
-function __autoload($class_name)
+spl_autoload_register(function($class_name)
 {
     try {
         $class_file = '../inc/class/' . strtolower($class_name) . '.php';
@@ -28,7 +28,7 @@ function __autoload($class_name)
     } catch (Exception $e) {
         echo "Exception: " . $e->getMessage();
     }
-}
+});
 
 $obj = new Employee();
 if (isset($_POST['overtime'])) {
